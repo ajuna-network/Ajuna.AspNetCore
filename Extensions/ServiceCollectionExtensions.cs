@@ -1,7 +1,7 @@
 using Ajuna.ServiceLayer;
-using Ajuna.ServiceLayer.Storage;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Ajuna.AspNetCore
@@ -12,7 +12,8 @@ namespace Ajuna.AspNetCore
         {
             var game = new GameService();
 
-            Task.Run(async () => {
+            Task.Run(async () =>
+            {
 
                 // Initialize the storage service layer..
                 await game.InitializeAsync(configuration);
@@ -36,6 +37,21 @@ namespace Ajuna.AspNetCore
                 if (interfaceTypes.Length > 0)
                 {
                     services.AddSingleton(interfaceTypes[0], storage);
+                }
+            }
+
+            return services;
+        }
+
+        public static IServiceCollection AddGameServiceSubscriptions(this IServiceCollection services)
+        {
+            services.AddTransient<SubscriptionManager>();
+
+            foreach (var type in Assembly.GetEntryAssembly().ExportedTypes)
+            {
+                if (type.GetTypeInfo().BaseType == typeof(SubscriptionHandler))
+                {
+                    services.AddSingleton(type);
                 }
             }
 
