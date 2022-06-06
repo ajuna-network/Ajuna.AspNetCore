@@ -1,7 +1,5 @@
 # Ajuna.AspNetCore
-![Build](https://github.com/ajuna-network/Ajuna.AspNetCore/actions/workflows/dotnet.yml/badge.svg)
-[![Nuget](https://img.shields.io/nuget/v/Ajuna.AspNetCore)](https://www.nuget.org/packages/Ajuna.NetApi/)
-[![GitHub issues](https://img.shields.io/github/issues/ajuna-network/Ajuna.AspNetCore.svg)](https://github.com/ajuna-network/Ajuna.AspNetCore/issues)
-[![license](https://img.shields.io/github/license/ajuna-network/Ajuna.AspNetCore)](https://github.com/ajuna-network/Ajuna.AspNetCore/blob/origin/LICENSE)
-[![contributors](https://img.shields.io/github/contributors/ajuna-network/Ajuna.AspNetCore)](https://github.com/ajuna-network/Ajuna.AspNetCore/graphs/contributors)  
-*Ajuna ASP .NET Core Extensions to easily implement RESTful services using Substrate storages.*
+![ajuna-Header-1080p_with_logo](https://user-images.githubusercontent.com/17710198/136852531-d9eb47cd-efcd-4c88-bdbf-78dfcbffe287.png)
+
+# 🚧 Repository moved to [Ajuna.SDK](https://github.com/ajuna-network/Ajuna.SDK).
+This project was [moved to a new location](https://github.com/ajuna-network/Ajuna.SDK) and is archived.
